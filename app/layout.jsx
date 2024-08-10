@@ -1,12 +1,15 @@
 import React from 'react'
 import '@styles/globals.css'
+import Nav from '@components/Nav'
+import Provider from '@components/Provider'
+
 
 export const metadata = {
     title: "Promptify",
     description: "Discorver and Share AI Prompts"
 }
 
-const RootLayout = () => {
+const RootLayout = ({ children }) => {
     return (
         <html lang='en'>
             <body>
@@ -15,7 +18,8 @@ const RootLayout = () => {
                 </div>
 
                 <main className='app'>
-                    {childrem}
+                    <Nav />
+                    {children}
                 </main>
             </body>
         </html>
